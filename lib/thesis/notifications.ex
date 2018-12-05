@@ -37,7 +37,7 @@ defmodule Thesis.Notifications do
       "other" => []
     }
     |> notifications_from_host_app(conn, notifications())
-    |> notifications_regarding_env(Mix.env)
+    |> notifications_regarding_env(:prod)
     |> notifications_regarding_page(conn.assigns[:thesis_page])
   end
 
